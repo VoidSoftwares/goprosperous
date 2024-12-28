@@ -1,0 +1,105 @@
+{% extends 'layouts/app/index.html' %}
+
+{% load static %}
+
+{% block title %}
+  <title>
+    Search
+  </title>
+{% endblock title %}
+
+{% block stylesheets %}{% endblock stylesheets %}
+
+{% block scripts %}{% endblock scripts %}
+
+{% block content %}
+  <div id="content" class="container-fluid content collapsed lookalike-page-content">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="d-none d-lg-block col-lg-3">
+          {% include 'layouts/app/secondry-sidebar.html' %}
+        </div>
+        <div class="col-12 col-lg-9">
+          {% include 'layouts/app/search_results_company.html' %}
+          <div class="card radius-24px border-transparent mt-3 p-3">
+            <div class="card-body radius-24px p-0 Text__Body__Body3LightRegular400 Text__900BlackHighEmp">
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="d-flex align-items-center">
+                  <span class="">Result per page</span>
+                  <select class="form-select form-select-sm ms-2 w-72px shadow-none">
+                    <option selected>10</option>
+                    <option value="1">25</option>
+                    <option value="2">50</option>
+                    <option value="3">100</option>
+                  </select>
+                </div>
+                <div class="mx-3">
+                  <span>1-50 of 1,250</span>
+                </div>
+                <div class="flex-grow-1 d-flex justify-content-center">
+                  <nav aria-label="Page navigation example">
+                    <ul class="pagination mb-0 theme-pagination">
+                      <li class="page-item">
+                        <a class="page-link" href="#">
+                          <i class="fa-solid fa-backward-step"></i>
+                        </a>
+                      </li>
+                      <li class="page-item">
+                        <a class="page-link disabled" href="#">
+                          <i class="fa-solid fa-angle-left"></i>
+                        </a>
+                      </li>
+                      <li class="page-item">
+                        <a class="page-link" href="#">
+                          1
+                        </a>
+                      </li>
+                      <li class="page-item">
+                        <a class="page-link active" href="#">
+                          2
+                        </a>
+                      </li>
+                      <li class="page-item">
+                        <a class="page-link" href="#">
+                          3
+                        </a>
+                      </li>
+                      <li class="page-item">
+                        <a class="page-link" href="#">
+                          ...
+                        </a>
+                      </li>
+                      <li class="page-item">
+                        <a class="page-link" href="#">
+                          10
+                        </a>
+                      </li>
+                      <li class="page-item">
+                        <a class="page-link" href="#">
+                          <i class="fa-solid fa-angle-right"></i>
+                        </a>
+                      </li>
+                      <li class="page-item">
+                        <a class="page-link" href="#">
+                          <i class="fa-solid fa-forward-step"></i>
+                        </a>
+                      </li>
+                    </ul>
+                  </nav>
+                </div>
+                <div>
+                  <div class="d-flex align-items-center">
+                    <span class="">Page</span>
+                    <input class="form-control form-control-sm w-72px ms-2 shadow-none" type="text" 
+                      placeholder="Number" aria-label="Number">
+                    <button class="btn btn-sm btn-link ms-1 Text__Button__Button2SmallSemibold600 MainColor__Main950 text-decoration-none">Go</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div> 
+  </div>
+{% endblock content %}

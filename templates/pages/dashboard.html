@@ -1,0 +1,279 @@
+{% extends 'layouts/app/index.html' %}
+
+{% load static %}
+
+{% block title %}
+  <title>
+    Dashboard
+  </title>
+{% endblock title %}
+
+{% block stylesheets %}{% endblock stylesheets %}
+
+{% block scripts %}{% endblock scripts %}
+
+{% block content %}
+  <div id="content" class="container-fluid content collapsed">
+    <div class="row">
+      <div class="col-8">
+        <div class="card rounded-4 border-0">
+          <div class="card-body rounded-4 border-0">
+            <div class="input-group input-group-lg">
+              <span class="input-group-text bg-white border-0">
+                <i class="fa-solid fa-magnifying-glass"></i>
+              </span>
+              <input class="form-control border-0 shadow-none" type="text" 
+                placeholder="Text here..." aria-label="Search">
+            </div>
+          </div>
+        </div>
+        <div class="row mt-3">
+          <div class="col-4">
+            <div class="card rounded-4 border-0">
+              <div class="card-body rounded-4 border-0 Text__H1H6__H5BoldSemibold600 Text__900BlackHighEmp p-4 text-center">
+                <i class="fa-solid fa-city"></i>
+                <span class="ms-2">Company Search</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-4">
+            <div class="card rounded-4 border-0">
+              <div class="card-body rounded-4 border-0 Text__H1H6__H5BoldSemibold600 Text__900BlackHighEmp p-4 text-center">
+                <i class="fa-solid fa-users"></i>
+                <span class="ms-2">People Search</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-4">
+            <div class="card rounded-4 border-0">
+              <div class="card-body rounded-4 border-0 Text__H1H6__H5BoldSemibold600 Text__900BlackHighEmp p-4 text-center">
+                <i class="fa-solid fa-microchip"></i>
+                <span class="ms-2">Lookalike Search</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card rounded-4 border-0 mt-3 card-secondary">
+          <div class="card-body rounded-1 border-0 card-body-secondary">
+            <div class="row">
+              <div class="col-5 d-inline pt-4 ps-4">
+                <span class="Text__H1H6__H1BoldBold700 Text__900BlackHighEmp">Companies of Interest</span>
+              </div>
+              <div class="col-7">
+                <img src="{% static 'theme/img/company_of_interest.png' %}" width="362" height="198" class="float-end">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-4">
+        <div class="card rounded-4 border-0">
+          <div class="card-body rounded-4 border-0 p-4">
+            <div class="Text__H1H6__H5BoldSemibold600 Text__900BlackHighEmp">
+              <i class="fa-solid fa-magnifying-glass"></i>
+              <span class="ms-3">Recent Search</span>
+            </div>
+            <div class="mt-2">
+              <div class="results-list">
+                <div class="list-item d-flex justify-content-between align-items-center rounded-3 p-3">
+                  <div class="item-left-side">
+                    <div class="d-flex flex-column">
+                      <div class="">
+                        <img src="{% static 'theme/img/comany-logo.png' %}" class="rounded-circle" width="24" height="24" alt="Mercedes-Benz">
+                        <span class="ms-2 Text__H1H6__H6BoldSemibold600 Text__900BlackHighEmp">Mercedes-Benz</span>
+                      </div>
+                      <div class="d-flex align-items-center ms-1 mt-2 Text__700BlackMediumEmp">
+                        <i class="fa-solid fa-list me-3"></i>
+                        <span class="item-tag rounded-pill px-3 py-2 Text__Body__Body1LightRegular400 MainColor__100_BG">20 min ago</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="item-right-side Text__700BlackMediumEmp">
+                    <i class="fas fa-chevron-right"></i>
+                  </div>
+                </div>
+                <div class="list-item-separator"></div>
+                <div class="list-item d-flex justify-content-between align-items-center rounded-3 p-3">
+                  <div class="item-left-side">
+                    <div class="d-flex flex-column">
+                      <div class="">
+                        <img src="{% static 'theme/img/comany-logo.png' %}" class="rounded-circle" width="24" height="24" alt="Mercedes-Benz">
+                        <span class="ms-2 Text__H1H6__H6BoldSemibold600 Text__900BlackHighEmp">Mercedes-Benz</span>
+                      </div>
+                      <div class="d-flex align-items-center ms-1 mt-2 Text__700BlackMediumEmp">
+                        <i class="fa-solid fa-list me-3"></i>
+                        <span class="item-tag rounded-pill px-3 py-2 Text__Body__Body1LightRegular400 MainColor__100_BG">20 min ago</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="item-right-side Text__700BlackMediumEmp">
+                    <i class="fas fa-chevron-right"></i>
+                  </div>
+                </div>
+                <div class="list-item-separator"></div>
+                <div class="list-item d-flex justify-content-between align-items-center rounded-3 p-3">
+                  <div class="item-left-side">
+                    <div class="d-flex flex-column">
+                      <div class="">
+                        <img src="{% static 'theme/img/comany-logo.png' %}" class="rounded-circle" width="24" height="24" alt="Mercedes-Benz">
+                        <span class="ms-2 Text__H1H6__H6BoldSemibold600 Text__900BlackHighEmp">Mercedes-Benz</span>
+                      </div>
+                      <div class="d-flex align-items-center ms-1 mt-2 Text__700BlackMediumEmp">
+                        <i class="fa-solid fa-list me-3"></i>
+                        <span class="item-tag rounded-pill px-3 py-2 Text__Body__Body1LightRegular400 MainColor__100_BG">20 min ago</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="item-right-side Text__700BlackMediumEmp">
+                    <i class="fas fa-chevron-right"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row mt-3">
+      <div class="col-6">
+        <div class="card rounded-4 border-0">
+          <div class="card-body rounded-4 border-0 p-4">
+            <div class="d-flex justify-content-between align-items-center Text__H1H6__H5BoldSemibold600 Text__900BlackHighEmp">
+              <div class="">
+                <i class="fa-solid fa-bookmark"></i>
+                <span class="ms-3">Saved Search</span>
+              </div>
+              <div>
+                <i class="fa-solid fa-arrow-right Text__600BlackLowEmp"></i>
+              </div>
+            </div>
+            <table class="table mt-3 information-table">
+              <thead>
+                <tr>
+                  <th scope="col">Search name</th>
+                  <th scope="col">Type</th>
+                  <th scope="col">Active Filters</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Tech company in US</td>
+                  <td>Company</td>
+                  <td>5</td>
+                </tr>
+                <tr>
+                  <td>Tech company in US</td>
+                  <td>Company</td>
+                  <td>5</td>
+                </tr>
+                <tr>
+                  <td>Tech company in US</td>
+                  <td>Company</td>
+                  <td>5</td>
+                </tr>
+                <tr>
+                  <td>Tech company in US</td>
+                  <td>Company</td>
+                  <td>5</td>
+                </tr>
+                <tr>
+                  <td>Tech company in US</td>
+                  <td>Company</td>
+                  <td>5</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+      <div class="col-6">
+        <div class="card rounded-4 border-0">
+          <div class="card-body rounded-4 border-0 p-4">
+            <div class="d-flex justify-content-between align-items-center Text__H1H6__H5BoldSemibold600 Text__900BlackHighEmp">
+              <div class="">
+                <i class="fa-solid fa-download"></i>
+                <span class="ms-3">Exported</span>
+              </div>
+              <div>
+                <i class="fa-solid fa-arrow-right Text__600BlackLowEmp"></i>
+              </div>
+            </div>
+            <div class="results-list mt-3">
+              <div class="list-item d-flex justify-content-between align-items-center rounded-3 p-3">
+                <div class="item-left-side">
+                  <div class="d-flex flex-column">
+                    <div class="">
+                      <img src="{% static 'theme/img/comany-logo.png' %}" class="rounded-circle" width="24" height="24" alt="Mercedes-Benz">
+                      <span class="ms-2 Text__H1H6__H6BoldSemibold600 Text__900BlackHighEmp">Mercedes-Benz</span>
+                    </div>
+                    <div class="d-flex align-items-center ms-1 mt-2 Text__700BlackMediumEmp">
+                      <i class="fa-regular fa-clock me-3"></i>
+                      <span class="item-tag rounded-pill px-3 py-2 Text__Body__Body1LightRegular400 MainColor__100_BG">20 min ago</span>
+                      <span class="item-tag rounded-pill px-3 py-2 Text__Body__Body1LightRegular400 MainColor__100_BG ms-2">20 min ago</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="item-right-side">
+                  <span class="badge rounded-pill px-3 py-2 Text__Body__Body1LightRegular400 text-warning text-bg-warning bg-opacity-10">
+                    <i class="fa-regular fa-clock me-1"></i>
+                    <span>
+                      Pending
+                    </span>
+                  </span>
+                </div>
+              </div>
+              <div class="list-item-separator"></div>
+              <div class="list-item d-flex justify-content-between align-items-center rounded-3 p-3">
+                <div class="item-left-side">
+                  <div class="d-flex flex-column">
+                    <div class="">
+                      <img src="{% static 'theme/img/comany-logo.png' %}" class="rounded-circle" width="24" height="24" alt="Mercedes-Benz">
+                      <span class="ms-2 Text__H1H6__H6BoldSemibold600 Text__900BlackHighEmp">Mercedes-Benz</span>
+                    </div>
+                    <div class="d-flex align-items-center ms-1 mt-2 Text__700BlackMediumEmp">
+                      <i class="fa-regular fa-clock me-3"></i>
+                      <span class="item-tag rounded-pill px-3 py-2 Text__Body__Body1LightRegular400 MainColor__100_BG">20 min ago</span>
+                      <span class="item-tag rounded-pill px-3 py-2 Text__Body__Body1LightRegular400 MainColor__100_BG ms-2">20 min ago</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="item-right-side Text__700BlackMediumEmp">
+                  <span class="badge rounded-pill px-3 py-2 Text__Body__Body1LightRegular400 text-danger text-bg-danger bg-opacity-10">
+                    <i class="fa-solid fa-xmark me-1"></i>
+                    <span>
+                      failed
+                    </span>
+                  </span>
+                </div>
+              </div>
+              <div class="list-item-separator"></div>
+              <div class="list-item d-flex justify-content-between align-items-center rounded-3 p-3">
+                <div class="item-left-side">
+                  <div class="d-flex flex-column">
+                    <div class="">
+                      <img src="{% static 'theme/img/comany-logo.png' %}" class="rounded-circle" width="24" height="24" alt="Mercedes-Benz">
+                      <span class="ms-2 Text__H1H6__H6BoldSemibold600 Text__900BlackHighEmp">Mercedes-Benz</span>
+                    </div>
+                    <div class="d-flex align-items-center ms-1 mt-2 Text__700BlackMediumEmp">
+                      <i class="fa-regular fa-clock me-3"></i>
+                      <span class="item-tag rounded-pill px-3 py-2 Text__Body__Body1LightRegular400 MainColor__100_BG">20 min ago</span>
+                      <span class="item-tag rounded-pill px-3 py-2 Text__Body__Body1LightRegular400 MainColor__100_BG ms-2">20 min ago</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="item-right-side Text__700BlackMediumEmp">
+                  <span class="badge rounded-pill px-3 py-2 Text__Body__Body1LightRegular400 text-info text-bg-info bg-opacity-10">
+                    <i class="fa-solid fa-check me-1"></i>
+                    <span>
+                      Finished
+                    </span>
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock content %}

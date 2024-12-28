@@ -1,0 +1,455 @@
+{% extends 'layouts/app/index.html' %}
+
+{% load static %}
+
+{% block title %}
+<title>
+  Company profile
+</title>
+{% endblock title %}
+
+{% block stylesheets %}{% endblock stylesheets %}
+
+{% block scripts %}{% endblock scripts %}
+
+{% block content %}
+<div id="content" class="container-fluid content collapsed">
+  <div class="card rounded-4 border-0">
+    <div class="card-body rounded-4 border-0 p-4">
+      <!-- Back to Company Profile -->
+      <div class="d-flex align-items-center mb-4">
+        <a href="/search_company"
+          class="button-main-outline h-40px px-3 py-0 text-decoration-none w-100 justify-content-start back-button">
+          <i class="fa-solid fa-arrow-left me-2"></i>
+          Company Profile
+        </a>
+      </div>
+
+      <!-- Company Header -->
+      <div class="d-flex justify-content-between align-items-start">
+        <div class="d-flex align-items-start">
+          <img src="{% static 'theme/img/amazon_logo.png' %}" width="80" height="80" alt="Company Logo"
+            class="me-3 rounded-4">
+          <div class="d-flex flex-column justify-content-around h-80px Text__900BlackHighEmp">
+            <h4 class="Text__H1H6__H5BoldSemibold600">
+              Amazon
+              <i class="fa-regular fa-copy ms-2"></i>
+            </h4>
+            <div>
+              <a href="#" class="text-decoration-none">
+                amazon.com
+              </a>
+              <a href="#" class="text-decoration-none Text__900BlackHighEmp">
+                <i class="fa-regular fa-copy ms-2"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="d-flex flex-column justify-content-end">
+          <div class="d-flex align-items-center justify-content-end">
+            <a href="#" class="text-decoration-none me-3 Text__900BlackHighEmp fs-4">
+              <i class="fa-brands fa-facebook"></i>
+            </a>
+            <a href="#" class="text-decoration-none me-3 Text__900BlackHighEmp fs-4">
+              <i class="fa-brands fa-linkedin"></i>
+            </a>
+            <a href="#" class="text-decoration-none me-3 Text__900BlackHighEmp fs-4">
+              <i class="fa-brands fa-x-twitter"></i>
+            </a>
+            <a href="#" class="text-decoration-none Text__900BlackHighEmp fs-4">
+              <i class="fa-brands fa-instagram"></i>
+            </a>
+          </div>
+          <div class="d-flex gap-8px mt-2">
+            <button class="filter-component ms-3">
+              <i class="fa-solid fa-download"></i>
+              <span class="ms-3">Export</span>
+            </button>
+            <button class="filter-component ms-3">
+              <i class="fa-solid fa-list"></i>
+              <span class="ms-3">Add to List</span>
+            </button>
+            <button class="filter-component ms-3">
+              <i class="fa-solid fa-microchip"></i>
+              <span class="ms-3">Show Lookalikes</span>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <hr class="line-separator my-5">
+
+      <!-- Description -->
+      <div class="">
+        <h5 class="Text__Body__Body3SemiboldSemibold600 Text__900BlackHighEmp">
+          <i class="bi bi-file-earmark-text me-2"></i>
+          Description
+        </h5>
+        <div class="d-flex flex-column align-items-center">
+          <p class="mt-2 Text__Body__Body3LightRegular400 Text__900BlackHighEmp align-self-start">
+            Amazon is guided by four principles: customer obsession rather than competitor focus, passion for invention,
+            commitment to operational excellence, and long-term thinking. We are driven by the excitement of building
+            technologies, inventing products, and providing services that change lives. We embrace new ways of doing
+            things,
+            make decisions quickly, and are not afraid to fail. We have the scope and capabilities of a large company,
+            and
+            the spirit and heart of a small one. Together, we are Amazon.
+          </p>
+          <button type="button" class="button-tab active">
+            Show more
+            <i class="fa-solid fa-caret-down ms-3"></i>
+          </button>
+        </div>
+      </div>
+
+      <hr class="line-separator my-5">
+
+      <!-- Company Details -->
+      <div class="row text-center">
+        <div class="col-md-4 mb-5">
+          <div class="d-flex flex-column align-items-start px-5 Text__900BlackHighEmp">
+            <div class="d-flex align-items-center Text__Body__Body3SemiboldSemibold600">
+              <i class="fa-regular fa-user"></i>
+              <span class="ms-3">
+                Size
+              </span>
+            </div>
+            <div class="d-flex mt-3 Text__Body__Body3LightRegular400">
+              <i class="bi bi-people opacity-0"></i>
+              <div class="ms-3">100,001+ employees</div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 mb-5">
+          <div class="d-flex flex-column align-items-start px-5 Text__900BlackHighEmp">
+            <div class="d-flex align-items-center Text__Body__Body3SemiboldSemibold600">
+              <i class="bi bi-calendar"></i>
+              <span class="ms-3">Founding year</span>
+            </div>
+            <div class="d-flex mt-3 Text__Body__Body3LightRegular400">
+              <i class="bi bi-calendar opacity-0"></i>
+              <div class="ms-3">1994</div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 mb-5">
+          <div class="d-flex flex-column align-items-start px-5 Text__900BlackHighEmp">
+            <div class="d-flex align-items-center Text__Body__Body3SemiboldSemibold600">
+              <i class="bi bi-geo-alt"></i>
+              <span class="ms-3">HQ</span>
+            </div>
+            <div class="d-flex mt-3 Text__Body__Body3LightRegular400">
+              <i class="bi bi-geo-alt opacity-0"></i>
+              <div class="ms-3">Seattle, Washington</div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 mb-5">
+          <div class="d-flex flex-column align-items-start px-5 Text__900BlackHighEmp">
+            <div class="d-flex align-items-center Text__Body__Body3SemiboldSemibold600">
+              <i class="bi bi-currency-dollar"></i>
+              <span class="ms-3">Market Cap</span>
+            </div>
+            <div class="d-flex mt-3 Text__Body__Body3LightRegular400">
+              <i class="bi bi-currency-dollar opacity-0"></i>
+              <div class="ms-3">$1821.4B</div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 mb-5">
+          <div class="d-flex flex-column align-items-start px-5 Text__900BlackHighEmp">
+            <div class="d-flex align-items-center Text__Body__Body3SemiboldSemibold600">
+              <i class="bi bi-building"></i>
+              <span class="ms-3">Company type</span>
+            </div>
+            <div class="d-flex mt-3 Text__Body__Body3LightRegular400">
+              <i class="bi bi-building opacity-0"></i>
+              <div class="ms-3">Information Technology & Services, Internet</div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 mb-5">
+          <div class="d-flex flex-column align-items-start px-5 Text__900BlackHighEmp">
+            <div class="d-flex align-items-center Text__Body__Body3SemiboldSemibold600">
+              <i class="bi bi-tags"></i>
+              <span class="ms-3">Industry tags</span>
+            </div>
+            <div class="d-flex mt-3 Text__Body__Body3LightRegular400">
+              <i class="bi bi-tags opacity-0"></i>
+              <div class="ms-3">Consumer Goods, E-Commerce, Retail</div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 mb-5">
+          <div class="d-flex flex-column align-items-start px-5 Text__900BlackHighEmp">
+            <div class="d-flex align-items-center Text__Body__Body3SemiboldSemibold600">
+              <i class="bi bi-bar-chart"></i>
+              <span class="ms-3">Annual Revenue</span>
+            </div>
+            <div class="d-flex mt-3 Text__Body__Body3LightRegular400">
+              <i class="bi bi-bar-chart opacity-0"></i>
+              <div class="ms-3">$538B</div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 mb-5">
+          <div class="d-flex flex-column align-items-start px-5 Text__900BlackHighEmp">
+            <div class="d-flex align-items-center Text__Body__Body3SemiboldSemibold600">
+              <i class="bi bi-graph-up-arrow"></i>
+              <span class="ms-3">Trading</span>
+            </div>
+            <div class="d-flex mt-3 Text__Body__Body3LightRegular400">
+              <i class="bi bi-graph-up-arrow opacity-0"></i>
+              <div class="ms-3">NASDAQ: AMZN</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <hr class="line-separator my-5">
+
+      <div class="row text-center">
+        <div class="col-md-4 mb-5">
+          <div class="d-flex flex-column align-items-start px-5 Text__900BlackHighEmp">
+            <div class="d-flex align-items-center Text__Body__Body3SemiboldSemibold600">
+              <i class="fa-regular fa-envelope"></i>
+              <span class="ms-3">
+                Primary email
+              </span>
+            </div>
+            <div class="d-flex mt-3 Text__Body__Body3LightRegular400">
+              <i class="bi bi-people opacity-0"></i>
+              <div class="ms-3">
+                <a href="#" class="text-decoration-none">info-aws@amazon.com</a>
+                <a href="#" class="text-decoration-none Text__900BlackHighEmp">
+                  <i class="fa-regular fa-copy ms-2"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 mb-5">
+          <div class="d-flex flex-column align-items-start px-5 Text__900BlackHighEmp">
+            <div class="d-flex align-items-center Text__Body__Body3SemiboldSemibold600">
+              <i class="bi bi-calendar"></i>
+              <span class="ms-3">Primary phone number</span>
+            </div>
+            <div class="d-flex mt-3 Text__Body__Body3LightRegular400">
+              <i class="bi bi-calendar opacity-0"></i>
+              <div class="ms-3">
+                <a href="#" class="text-decoration-none">+12345567987</a>
+                <a href="#" class="text-decoration-none Text__900BlackHighEmp">
+                  <i class="fa-regular fa-copy ms-2"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <hr class="line-separator my-4">
+
+      <div>
+        <h5 class="Text__Body__Body3SemiboldSemibold600 Text__900BlackHighEmp">
+          <i class="fa-solid fa-wand-magic-sparkles me-2"></i>
+          Description
+        </h5>
+        <div class="row mt-3">
+          <div class="col-md-3">
+            <div class="card rounded-4">
+              <div class="card-body rounded-4 p-4">
+                <div class="d-flex flex-column">
+                  <div class="d-flex">
+                    <img src="{% static 'theme/img/smile.png' %}" width="32" height="32" class="rounded-4">
+                    <span class="Text__H1H6__H5BoldSemibold600 Text__900BlackHighEmp ms-3">Amazon</span>
+                  </div>
+                  <div class="Text__900BlackHighEmp mt-3">
+                    <i class="fa-solid fa-globe cursor-pointer me-3"></i>
+                    <i class="fa-brands fa-facebook cursor-pointer me-3"></i>
+                    <i class="fa-brands fa-linkedin cursor-pointer me-3"></i>
+                    <i class="fa-brands fa-x-twitter cursor-pointer me-3"></i>
+                    <i class="fa-brands fa-instagram cursor-pointer me-3"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="card rounded-4">
+              <div class="card-body rounded-4 p-4">
+                <div class="d-flex flex-column">
+                  <div class="d-flex">
+                    <img src="{% static 'theme/img/smile.png' %}" width="32" height="32" class="rounded-4">
+                    <span class="Text__H1H6__H5BoldSemibold600 Text__900BlackHighEmp ms-3">Amazon</span>
+                  </div>
+                  <div class="Text__900BlackHighEmp mt-3">
+                    <i class="fa-solid fa-globe cursor-pointer me-3"></i>
+                    <i class="fa-brands fa-facebook cursor-pointer me-3"></i>
+                    <i class="fa-brands fa-linkedin cursor-pointer me-3"></i>
+                    <i class="fa-brands fa-x-twitter cursor-pointer me-3"></i>
+                    <i class="fa-brands fa-instagram cursor-pointer me-3"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="card rounded-4">
+              <div class="card-body rounded-4 p-4">
+                <div class="d-flex flex-column">
+                  <div class="d-flex">
+                    <img src="{% static 'theme/img/smile.png' %}" width="32" height="32" class="rounded-4">
+                    <span class="Text__H1H6__H5BoldSemibold600 Text__900BlackHighEmp ms-3">Amazon</span>
+                  </div>
+                  <div class="Text__900BlackHighEmp mt-3">
+                    <i class="fa-solid fa-globe cursor-pointer me-3"></i>
+                    <i class="fa-brands fa-facebook cursor-pointer me-3"></i>
+                    <i class="fa-brands fa-linkedin cursor-pointer me-3"></i>
+                    <i class="fa-brands fa-x-twitter cursor-pointer me-3"></i>
+                    <i class="fa-brands fa-instagram cursor-pointer me-3"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="card rounded-4">
+              <div class="card-body rounded-4 p-4">
+                <div class="d-flex justify-content-between">
+                  <div class="d-flex flex-column">
+                    <span class="Text__H1H6__H5BoldSemibold600 Text__900BlackHighEmp">Show all lookalikes</span>
+                    <div class="Text__900BlackHighEmp mt-3">
+                      208 found
+                    </div>
+                  </div>
+                  <div class="d-flex justify-content-end align-items-center">
+                    <a href="#" class="text-decoration-none Text__900BlackHighEmp">
+                      <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <hr class="line-separator my-5">
+
+      <div>
+        <h5 class="Text__Body__Body3SemiboldSemibold600 Text__900BlackHighEmp">
+          <i class="fa-solid fa-location-dot me-2"></i>
+          Locations
+        </h5>
+        <div class="row mt-3">
+          <div class="col-md-3">
+            <div class="card rounded-4">
+              <div class="card-body rounded-4 p-4">
+                <div class="d-flex flex-column">
+                  <span class="Text__H1H6__H5BoldSemibold600 Text__900BlackHighEmp">Head Office</span>
+                  <div class="Text__900BlackHighEmp mt-1">
+                    410 Terry Ave N, 98109, Seattle, Washington, United States
+                  </div>
+                  <img src="{% static 'theme/img/map.png' %}" width="100%" height="136" class="rounded-4 mt-3">
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="card rounded-4">
+              <div class="card-body rounded-4 p-4">
+                <div class="d-flex flex-column">
+                  <span class="Text__H1H6__H5BoldSemibold600 Text__900BlackHighEmp">Head Office</span>
+                  <div class="Text__900BlackHighEmp mt-1">
+                    410 Terry Ave N, 98109, Seattle, Washington, United States
+                  </div>
+                  <img src="{% static 'theme/img/map.png' %}" width="100%" height="136" class="rounded-4 mt-3">
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="card rounded-4">
+              <div class="card-body rounded-4 p-4">
+                <div class="d-flex flex-column">
+                  <span class="Text__H1H6__H5BoldSemibold600 Text__900BlackHighEmp">Head Office</span>
+                  <div class="Text__900BlackHighEmp mt-1">
+                    410 Terry Ave N, 98109, Seattle, Washington, United States
+                  </div>
+                  <img src="{% static 'theme/img/map.png' %}" width="100%" height="136" class="rounded-4 mt-3">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <hr class="line-separator my-4">
+
+      <div>
+        <h5 class="Text__Body__Body3SemiboldSemibold600 Text__900BlackHighEmp">
+          <i class="fa-solid fa-location-dot me-2"></i>
+          Keywords
+        </h5>
+        <div class="d-flex flex-wrap mt-3 gap-8px">
+          <span class="theme-badge-main-outline">Amazon</span>
+          <span class="theme-badge-main-outline">Amazon</span>
+          <span class="theme-badge-main-outline">Amazon</span>
+          <span class="theme-badge-main-outline">Amazon</span>
+          <span class="theme-badge-main-outline">Amazon</span>
+          <span class="theme-badge-main-outline">Amazon</span>
+          <span class="theme-badge-main-outline">Amazon</span>
+          <span class="theme-badge-main-outline">Amazon</span>
+          <span class="theme-badge-main-outline">Amazon</span>
+          <a href="#" class="text-decoration-none align-content-center">
+            <span class="theme-badge-main-outline px-4">+94 keywords <i class="bi bi-arrow-right ms-2"></i></span>
+          </a>
+        </div>
+      </div>
+
+      <hr class="line-separator my-4">
+
+      <!-- Website Analytics -->
+      <div>
+        <h5 class="Text__Body__Body3SemiboldSemibold600 Text__900BlackHighEmp">
+          <i class="fa-solid fa-globe me-2"></i>
+          Website analytics
+        </h5>
+        <div class="row text-center mt-3">
+          <div class="col-md-3 mb-3">
+            <div class="card rounded-4">
+              <div class="card-body rounded-4 p-4 Text__900BlackHighEmp">
+                <div class="Text__H1H6__H6BoldSemibold600">Total monthly visits</div>
+                <div class="Text__H1H6__H6LightRegular400 mt-2">3B</div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3 mb-3">
+            <div class="card rounded-4">
+              <div class="card-body rounded-4 p-4 Text__900BlackHighEmp">
+                <div class="Text__H1H6__H6BoldSemibold600">Bounce rate</div>
+                <div class="Text__H1H6__H6LightRegular400 mt-2">33.03%</div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3 mb-3">
+            <div class="card rounded-4">
+              <div class="card-body rounded-4 p-4 Text__900BlackHighEmp">
+                <div class="Text__H1H6__H6BoldSemibold600">Page views / visit</div>
+                <div class="Text__H1H6__H6LightRegular400 mt-2">9.33</div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3 mb-3">
+            <div class="card rounded-4">
+              <div class="card-body rounded-4 p-4 Text__900BlackHighEmp">
+                <div class="Text__H1H6__H6BoldSemibold600">Avg. visit duration</div>
+                <div class="Text__H1H6__H6LightRegular400 mt-2">00:07:00</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  {% endblock content %}

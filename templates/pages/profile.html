@@ -1,0 +1,101 @@
+{% extends 'layouts/app/index.html' %}
+
+{% load static %}
+
+{% block title %}
+  <title>
+    Profile
+  </title>
+{% endblock title %}
+
+{% block stylesheets %}{% endblock stylesheets %}
+
+{% block scripts %}{% endblock scripts %}
+
+{% block content %}
+  <div id="content" class="container-fluid content collapsed">
+    <div class="row h-100">
+      <div class="col-3">
+        <div class="card rounded-4 border-0 h-100">
+          <div class="card-body rounded-4 border-0 p-4 py-2 h-100">
+            <ul class="list-group border-0 profile-list-group h-100">
+              <a href="#" class="list-group-item list-group-item-action border-0 rounded-2 my-2 Text__900BlackHighEmp Text__Body__Body3LightRegular400">
+                <i class="fa-regular fa-user"></i>
+                <span class="ms-2">Account</span>
+              </a>
+              <a href="#" class="list-group-item list-group-item-action border-0 rounded-2 my-2 Text__900BlackHighEmp Text__Body__Body3LightRegular400">
+                <i class="fa-solid fa-users"></i>
+                <span class="ms-2">Add users</span>
+              </a>
+              <a href="#" class="list-group-item list-group-item-action border-0 rounded-2 my-2 Text__900BlackHighEmp Text__Body__Body3LightRegular400">
+                <i class="fa-solid fa-scroll"></i>
+                <span class="ms-2">Billing & Usage</span>
+              </a>
+              <a href="#" class="list-group-item list-group-item-action border-0 rounded-2 my-2 Text__900BlackHighEmp Text__Body__Body3LightRegular400">
+                <i class="fa-solid fa-lock"></i>
+                <span class="ms-2">Change password</span>
+              </a>
+              <a href="#" class="list-group-item list-group-item-action border-0 rounded-2 my-2 Text__900BlackHighEmp Text__Body__Body3LightRegular400">
+                <i class="fa-solid fa-at"></i>
+                <span class="ms-2">Change primary email</span>
+              </a>
+              <a href="#" class="list-group-item list-group-item-action border-0 rounded-2 my-2 Text__900BlackHighEmp Text__Body__Body3LightRegular400">
+                <i class="fa-solid fa-shield"></i>
+                <span class="ms-2">Privacy & Policy</span>
+              </a>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="col-9">
+        <div class="card rounded-4 border-0">
+          <div class="card-body rounded-4 border-0 p-4">
+            <form action="/" >
+              <div class="Text__H1H6__H5BoldSemibold600 Text__900BlackHighEmp">
+                <span class="">Profile Details</span>
+              </div>
+              <div class="d-flex justify-content-center mt-3">
+                <a class="position-relative">
+                  <img src="{% static 'theme/img/profile_pic_4x.png' %}" width="164" height="164" class="rounded-circle">
+                  <span class="position-absolute translate-middle p-2 bg-warning border border-0 rounded-circle profile-picture-icon">
+                    <i class="fa-solid fa-camera"></i>
+                  </span>
+                </a>
+              </div>
+              <div class="row mt-4">
+                <div class="col-6">
+                  <div class="mb-3">
+                    <label class="form-label mb-1">Full Name</label>
+                    <input class="form-control form-control-lg rounded-pill" type="text" placeholder="Name"
+                     aria-label=".form-control-lg example">
+                  </div>
+                </div>
+                <div class="col-6">
+                  <div class="mb-3">
+                    <label class="form-label mb-1">Email</label>
+                    <input class="form-control form-control-lg rounded-pill" type="text" placeholder="Email"
+                     aria-label=".form-control-lg example">
+                  </div>
+                </div>
+              </div>
+              <div class="row mt-2">
+                <div class="col-6">
+                  <div class="mb-3">
+                    <label class="form-label mb-1">Phone Number</label>
+                    <input class="form-control form-control-lg rounded-pill" type="text" placeholder="+1 524569 45674"
+                     aria-label=".form-control-lg example">
+                  </div>
+                </div>
+              </div>
+              <div class="row mt-4 mb-2">
+                <div class="col-12">
+                  <button type="button" class="button-main">Save Changes</button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock content %}

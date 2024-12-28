@@ -1,0 +1,168 @@
+{% extends 'layouts/app/index.html' %}
+
+{% block title %}
+  <title>
+    Skeleton
+  </title>
+{% endblock title %}
+
+{% block stylesheets %}{% endblock stylesheets %}
+
+{% block scripts %}{% endblock scripts %}
+
+{% block content %}
+  <div id="content" class="container-fluid content collapsed">
+    <div class="container mt-3">
+      <div class="row">
+        <div class="col-12 col-lg-1"></div>
+        <div class="col-12 col-lg-10">
+          <div class="d-flex align-items-center justify-content-between">
+            <div class="d-flex">
+              <button type="button" class="button-tab active">
+                <i class="fa-regular fa-building me-2"></i>
+                Company
+              </button>
+              <button type="button" class="button-tab ms-3">
+                <i class="fa-regular fa-user me-2"></i>
+                Person
+              </button>
+            </div>
+            <div class="input-group input-group-lg w-50">
+              <span class="input-group-text bg-white border-0 rounded-end rounded-4">
+                <i class="fa-solid fa-magnifying-glass"></i>
+              </span>
+              <input class="form-control border-0 shadow-none rounded-start rounded-4 ps-0" type="text" 
+                placeholder="Search" aria-label="Search">
+            </div>
+          </div>
+
+          <div class="mt-4">
+            <div class="card table-wrapper">
+              <div class="card-body p-0">
+                <table class="table mb-0">
+                  <thead>
+                    <tr>
+                      <th>Type</th>
+                      <th>Date Exported</th>
+                      <th>Records</th>
+                      <th width="5%">Status</th>
+                      <th width="5%">Download</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Tech company in US</td>
+                      <td>2024-03-13 07:03</td>
+                      <td>4</td>
+                      <td class="text-end">
+                        <span class="badge rounded-pill px-3 py-2 Text__Body__Body1LightRegular400 text-danger text-bg-danger bg-opacity-10">
+                          <i class="fa-solid fa-xmark me-1"></i>
+                          <span>
+                            failed
+                          </span>
+                        </span>
+                      </td>
+                      <td class="text-end">
+                        <button class="button-main-outline h-40px radius-100 natural-button px-3 py-1">
+                          <span>
+                            Download
+                          </span>
+                          <i class="bi bi-arrow-down-circle-fill ms-2"></i>
+                        </button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>Tech company in US</td>
+                      <td>2024-03-13 07:03</td>
+                      <td>4</td>
+                      <td class="text-end">
+                        <span class="badge rounded-pill px-3 py-2 Text__Body__Body1LightRegular400 text-info text-bg-info bg-opacity-10">
+                          <i class="fa-solid fa-check me-1"></i>
+                          <span>
+                            Finished
+                          </span>
+                        </span>
+                      </td>
+                      <td class="text-end">
+                        <button class="button-main-outline h-40px radius-100 natural-button px-3 py-1">
+                          <span>
+                            Download
+                          </span>
+                          <i class="bi bi-arrow-down-circle-fill ms-2"></i>
+                        </button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>Tech company in US</td>
+                      <td>2024-03-13 07:03</td>
+                      <td>4</td>
+                      <td class="text-end">
+                        <span class="badge rounded-pill px-3 py-2 Text__Body__Body1LightRegular400 text-warning text-bg-warning bg-opacity-10">
+                          <i class="fa-regular fa-clock me-1"></i>
+                          <span>
+                            Pending
+                          </span>
+                        </span>
+                      </td>
+                      <td class="text-end">
+                        <button class="button-main-outline h-40px radius-100 natural-button px-3 py-1">
+                          <span>
+                            Download
+                          </span>
+                          <i class="bi bi-arrow-down-circle-fill ms-2"></i>
+                        </button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>Tech company in US</td>
+                      <td>2024-03-13 07:03</td>
+                      <td>4</td>
+                      <td class="text-end">
+                        <span class="badge rounded-pill px-3 py-2 Text__Body__Body1LightRegular400 text-warning text-bg-warning bg-opacity-10">
+                          <i class="fa-regular fa-clock me-1"></i>
+                          <span>
+                            Pending
+                          </span>
+                        </span>
+                      </td>
+                      <td class="text-end">
+                        <button class="button-main-outline h-40px radius-100 natural-button px-3 py-1">
+                          <span>
+                            Download
+                          </span>
+                          <i class="bi bi-arrow-down-circle-fill ms-2"></i>
+                        </button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>Tech company in US</td>
+                      <td>2024-03-13 07:03</td>
+                      <td>4</td>
+                      <td class="text-end">
+                        <span class="badge rounded-pill px-3 py-2 Text__Body__Body1LightRegular400 text-warning text-bg-warning bg-opacity-10">
+                          <i class="fa-regular fa-clock me-1"></i>
+                          <span>
+                            Pending
+                          </span>
+                        </span>
+                      </td>
+                      <td class="text-end">
+                        <button class="button-main-outline h-40px radius-100 natural-button px-3 py-1">
+                          <span>
+                            Download
+                          </span>
+                          <i class="bi bi-arrow-down-circle-fill ms-2"></i>
+                        </button>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-lg-1"></div>
+      </div>
+    </div>
+  </div>
+{% endblock content %}

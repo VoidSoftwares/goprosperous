@@ -1,0 +1,212 @@
+{% extends 'layouts/app/index.html' %}
+
+{% load static %}
+
+{% block title %}
+<title>
+  Person profile
+</title>
+{% endblock title %}
+
+{% block stylesheets %}{% endblock stylesheets %}
+
+{% block scripts %}{% endblock scripts %}
+
+{% block content %}
+<div id="content" class="container-fluid content collapsed">
+  <div class="container">
+    <div class="card rounded-4 border-0 mx-5 mt-2">
+      <div class="card-body rounded-4 border-0 p-4">
+        <div class="d-flex align-items-center mb-4">
+          <a href="/search_person"
+            class="button-main-outline h-40px px-3 py-0 text-decoration-none w-100 justify-content-start back-button">
+            <i class="fa-solid fa-arrow-left me-2"></i>
+            Person Profile
+          </a>
+        </div>
+
+        <div class="row align-items-center">
+          <div class="col-md-6 d-flex align-items-center">
+            <img src="{% static 'theme/img/amazon_ceo.png' %}" width="160" height="160" class="rounded-4 me-3"
+              alt="Profile Image">
+            <div class="d-flex flex-column justify-content-around h-160px">
+              <div class="d-flex flex-column">
+                <h5 class="mb-0">Gil Dennis</h5>
+                <p class="mb-0">President and CEO</p>
+              </div>
+              <div>
+                <p class="mb-0"><i class="bi bi-geo-alt me-2"></i> Gainesville, US</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 d-flex flex-column align-items-start">
+            <div class="d-flex align-items-center mb-2">
+              <img src="{% static 'theme/img/amazon_logo.png' %}" width="40" height="40" class="me-3"
+                alt="Company Logo">
+              <div>
+                <h5 class="mb-0">Amazon</h5>
+              </div>
+            </div>
+            <div class="d-flex mb-2">
+              <div class="Text__900BlackHighEmp">
+                <i class="fa-solid fa-globe cursor-pointer me-3"></i>
+                <i class="fa-brands fa-facebook cursor-pointer me-3"></i>
+                <i class="fa-brands fa-linkedin cursor-pointer me-3"></i>
+                <i class="fa-brands fa-x-twitter cursor-pointer me-3"></i>
+                <i class="fa-brands fa-instagram cursor-pointer me-3"></i>
+              </div>
+            </div>
+            <p class="mb-0 mt-2"><i class="bi bi-geo-alt me-2"></i>Gainesville, US</p>
+          </div>
+        </div>
+
+        <hr class="line-separator my-4">
+
+        <div>
+          <div class="d-flex justify-content-between">
+            <h5 class="Text__Body__Body3SemiboldSemibold600 Text__900BlackHighEmp">
+              <i class="fa-solid fa-file-invoice me-2"></i>
+              Contacts
+            </h5>
+            <button class="button-main-outline h-40px px-3 ">
+              <i class="fa-regular fa-envelope me-2"></i>
+              Reveal Details
+            </button>
+          </div>
+          <div class="row mt-3">
+            <div class="col-md-4 mb-5">
+              <div class="d-flex flex-column align-items-start px-5 Text__900BlackHighEmp">
+                <div class="d-flex align-items-center Text__Body__Body3SemiboldSemibold600">
+                  <i class="fa-regular fa-envelope"></i>
+                  <span class="ms-3">
+                    Primary email
+                  </span>
+                </div>
+                <div class="d-flex mt-3 Text__Body__Body3LightRegular400">
+                  <i class="bi bi-people opacity-0"></i>
+                  <div class="ms-3">
+                    <a href="#" class="text-decoration-none">info-aws@amazon.com</a>
+                    <a href="#" class="text-decoration-none Text__900BlackHighEmp">
+                      <i class="fa-regular fa-copy ms-2"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 mb-5">
+              <div class="d-flex flex-column align-items-start px-5 Text__900BlackHighEmp">
+                <div class="d-flex align-items-center Text__Body__Body3SemiboldSemibold600">
+                  <i class="bi bi-calendar"></i>
+                  <span class="ms-3">Primary phone number</span>
+                </div>
+                <div class="d-flex mt-3 Text__Body__Body3LightRegular400">
+                  <i class="bi bi-calendar opacity-0"></i>
+                  <div class="ms-3">
+                    <a href="#" class="text-decoration-none">+12345567987</a>
+                    <a href="#" class="text-decoration-none Text__900BlackHighEmp">
+                      <i class="fa-regular fa-copy ms-2"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 mb-5">
+              <div class="d-flex justify-content-end">
+                <div class="Text__900BlackHighEmp">
+                  <i class="fa-solid fa-globe cursor-pointer me-3 fs-3"></i>
+                  <i class="fa-brands fa-facebook cursor-pointer me-3 fs-3"></i>
+                  <i class="fa-brands fa-linkedin cursor-pointer me-3 fs-3"></i>
+                  <i class="fa-brands fa-x-twitter cursor-pointer me-3 fs-3"></i>
+                  <i class="fa-brands fa-instagram cursor-pointer me-3 fs-3"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <hr class="line-separator my-4 mt-2">
+
+        <div>
+          <h5 class="Text__Body__Body3SemiboldSemibold600 Text__900BlackHighEmp">
+            <i class="fa-solid fa-clock me-2"></i>
+            Work History
+          </h5>
+          <div class="row mt-3">
+            <div class="col-md-6 mb-3">
+              <div class="card rounded-4">
+                <div class="card-body rounded-4 p-4">
+                  <div class="d-flex flex-column">
+                    <div class="d-flex">
+                      <img src="{% static 'theme/img/amazon_logo.png' %}" width="32" height="32" class="rounded-2">
+                      <span class="Text__H1H6__H5BoldSemibold600 Text__900BlackHighEmp ms-3">Amazon</span>
+                    </div>
+                    <span class="Text__900BlackHighEmp mt-3">
+                      President and CEO
+                    </span>
+                    <span class="Text__900BlackHighEmp mt-2">
+                      /Current • 3 years
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 mb-3">
+              <div class="card rounded-4">
+                <div class="card-body rounded-4 p-4">
+                  <div class="d-flex flex-column">
+                    <div class="d-flex">
+                      <img src="{% static 'theme/img/amazon_logo.png' %}" width="32" height="32" class="rounded-2">
+                      <span class="Text__H1H6__H5BoldSemibold600 Text__900BlackHighEmp ms-3">Amazon</span>
+                    </div>
+                    <span class="Text__900BlackHighEmp mt-3">
+                      President and CEO
+                    </span>
+                    <span class="Text__900BlackHighEmp mt-2">
+                      /Current • 3 years
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 mb-3">
+              <div class="card rounded-4">
+                <div class="card-body rounded-4 p-4">
+                  <div class="d-flex flex-column">
+                    <div class="d-flex">
+                      <img src="{% static 'theme/img/amazon_logo.png' %}" width="32" height="32" class="rounded-2">
+                      <span class="Text__H1H6__H5BoldSemibold600 Text__900BlackHighEmp ms-3">Amazon</span>
+                    </div>
+                    <span class="Text__900BlackHighEmp mt-3">
+                      President and CEO
+                    </span>
+                    <span class="Text__900BlackHighEmp mt-2">
+                      /Current • 3 years
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 mb-3">
+              <div class="card rounded-4">
+                <div class="card-body rounded-4 p-4">
+                  <div class="d-flex flex-column">
+                    <div class="d-flex">
+                      <img src="{% static 'theme/img/amazon_logo.png' %}" width="32" height="32" class="rounded-2">
+                      <span class="Text__H1H6__H5BoldSemibold600 Text__900BlackHighEmp ms-3">Amazon</span>
+                    </div>
+                    <span class="Text__900BlackHighEmp mt-3">
+                      President and CEO
+                    </span>
+                    <span class="Text__900BlackHighEmp mt-2">
+                      /Current • 3 years
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  {% endblock content %}

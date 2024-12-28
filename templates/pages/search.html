@@ -1,0 +1,83 @@
+{% extends 'layouts/app/index.html' %}
+
+{% load static %}
+
+{% block title %}
+  <title>
+    Search
+  </title>
+{% endblock title %}
+
+{% block stylesheets %}{% endblock stylesheets %}
+
+{% block scripts %}{% endblock scripts %}
+
+{% block content %}
+  <div id="content" class="container-fluid content collapsed lookalike-page-content">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="d-none d-lg-block col-lg-3">
+          {% include 'layouts/app/secondry-sidebar.html' %}
+        </div>
+        <div class="col-12 col-lg-9">
+          <div class="container">
+            <div class="d-flex justify-content-center align-items-center">
+              <img src="{% static 'theme/img/search.png' %}" width="388" height="288">
+            </div>
+            <div class="d-flex justify-content-center align-items-center mt-2 Text__Body__Body3LightRegular400 Text__900BlackHighEmp">
+              Start your search by applying filters on the left side, or use presets below
+            </div>
+            <div class="row mt-5">
+              <div class="col col-lg-6 d-none">
+                <div class="d-flex align-items-center Text__Body__Body3SemiboldSemibold600 Text__700BlackMediumEmp">
+                  <i class="fa-solid fa-floppy-disk me-2"></i>
+                  <span>
+                    Saved Searches
+                  </span>
+                </div>
+                <div class="gray-area mt-1 d-flex justify-content-center align-items-center">
+                  <span class="Text__Body__Body3LightRegular400 Text__900BlackHighEmp">No saved searches</span>
+                </div>
+              </div>
+              <div class="col col-lg-6">
+                <div class="d-flex align-items-center Text__Body__Body3SemiboldSemibold600 Text__700BlackMediumEmp">
+                  <i class="fa-solid fa-floppy-disk me-2"></i>
+                  <span>
+                    Saved Searches
+                  </span>
+                </div>
+                <div class="gray-area mt-1 d-flex flex-column p-3">
+                  <div class="p-2 Text__900BlackHighEmp d-flex flex-column">
+                    <span class="Text__Body__Body3SemiboldSemibold600 cursor-pointer">aaa</span>
+                    <span class="Text__Body__Body2LightRegular400 mt-2">2024-03-13 08:11:49</span>
+                  </div>
+                  <div class="p-2 Text__900BlackHighEmp d-flex flex-column">
+                    <span class="Text__Body__Body3SemiboldSemibold600 cursor-pointer">aaa</span>
+                    <span class="Text__Body__Body2LightRegular400 mt-2">2024-03-13 08:11:49</span>
+                  </div>
+                  <div class="p-2 Text__900BlackHighEmp d-flex flex-column">
+                    <span class="Text__Body__Body3SemiboldSemibold600 cursor-pointer">aaa</span>
+                    <span class="Text__Body__Body2LightRegular400 mt-2">2024-03-13 08:11:49</span>
+                  </div>
+                </div>
+              </div>
+              <div class="col col-lg-6">
+                <div class="d-flex align-items-center Text__Body__Body3SemiboldSemibold600 Text__700BlackMediumEmp">
+                  <i class="fa-regular fa-clock me-2"></i>
+                  <span>
+                    Recent Searches
+                  </span>
+                </div>
+                <div class="gray-area mt-1 d-flex flex-column align-items-start">
+                  <a href="#" class="button-link h-24px mt-3 ps-4 py-0">Mercedes-Benz</a>
+                  <a href="#" class="button-link  h-24px mt-3 ps-4 py-0">Mercedes-Benz</a>
+                  <a href="#" class="button-link  h-24px mt-3 ps-4 py-0">Mercedes-Benz</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div> 
+  </div>
+{% endblock content %}

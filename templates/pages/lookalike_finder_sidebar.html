@@ -1,0 +1,554 @@
+{% extends 'layouts/app/index.html' %}
+
+{% load static %}
+
+{% block title %}
+  <title>
+    Find Lookalike
+  </title>
+{% endblock title %}
+
+{% block stylesheets %}{% endblock stylesheets %}
+
+{% block scripts %}{% endblock scripts %}
+
+{% block content %}
+  <div id="content" class="container-fluid content collapsed lookalike-page-content">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="d-none d-lg-block col-lg-3">
+          {% include 'layouts/app/secondry-sidebar.html' %}
+        </div>
+        <div class="col-12 col-lg-9">
+          <div class="">
+            <div class="d-flex justify-content-between">
+              <div class="d-flex align-items-center">
+                <h5 class="me-3 mb-0 Text__H1H6__H5BoldSemibold600 Text__900BlackHighEmp">Find Lookalike</h5>
+                <button type="button" class="button-tab active me-3">
+                  <i class="fa-regular fa-building me-2"></i>
+                  Company
+                </button>
+                <button type="button" class="button-tab">
+                  <i class="fa-regular fa-user me-2"></i>
+                  Person
+                </button>
+              </div>
+              <button type="button" class="button-regular">Clear All</button>
+            </div>
+            <div class="card rounded-4 border-0 mt-3">
+              <div class="card-body rounded-4 border-0 p-4">
+                <textarea rows="4" cols="" class="form-control border-0 border-width-bottom-1 mb-0 shadow-none" 
+                  placeholder="Eg.: Company name, Person name"></textarea>
+                <hr class="mt-0">
+                <div class="d-flex justify-content-between">
+                  <div class="d-flex">
+                    <button type="button" class="button-main h-40px me-3">
+                      Find Lookalikes
+                      <i class="fa-solid fa-wand-magic-sparkles ms-2"></i>
+                    </button>
+                    <button type="button" class="button-main-outline h-40px button-triggers-theme-popover"
+                      data-bs-toggle="popover" data-bs-placement="bottom"
+                      data-bs-custom-class="theme-popover"
+                      data-bs-trigger="hover"
+                      data-bs-content='<span class="d-block">Required format of the CSV file</span><span class="d-block">Name - Email - Phone - Job title - Company</span>'>
+                      Import
+                      <i class="fa-solid fa-circle-exclamation ms-2"></i>
+                    </button>
+                  </div>
+                  <div class="d-flex align-items-center">
+                    <button type="button" class="button-link h-40px">
+                      Clear
+                      <span class="badge bg-warning rounded-circle ms-2 w-24px h-24px d-flex align-items-center justify-content-center">05</span>
+                    </button>
+                    <div class="dropdown">
+                      <button type="button" class="button-main-outline h-40px" data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside">
+                        Filter
+                        <i class="fa-solid fa-filter ms-2"></i>
+                      </button>
+                      <div class="dropdown-menu theme-dropdown-menu" style="width: 492px;">
+                        <div class="d-flex justify-content-between align-items-center Text__Body__Body2Semibold600 Text__700BlackMediumEmp">
+                          <div>
+                            <span class="">Filters</span>
+                          </div>
+                          <div>
+                            <i class="fa-solid fa-xmark"></i>
+                          </div>
+                        </div>
+                        <div class="d-flex justify-content-between align-items-center mt-3">
+                          <div data-bs-toggle="collapse" href="#keyword-filter-collapse" role="button" 
+                            class="form-section-title" aria-expanded="true" aria-controls="keyword-filter-collapse">
+                            <i class="fa-solid fa-chevron-down chevron-icon me-2"></i>
+                            <span>Keyword</span>
+                          </div>
+                          <div>
+                            <button type="button" class="button-link p-0 h-24px font-small">
+                              Clear
+                              <span class="badge bg-warning rounded-circle ms-2 w-24px h-24px d-flex align-items-center justify-content-center">05</span>
+                            </button>
+                          </div>
+                        </div>
+                        <div id="keyword-filter-collapse" class="collapse show mt-2">
+                          <div class="dropdown">
+                            <div class="form-text-input" data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside">
+                              <span>
+                                <i class="fa-solid fa-magnifying-glass"></i>
+                              </span>
+                              <input class="form-control rounded-pill border-0" type="text" placeholder="Keywords..." aria-label="keywords">
+                            </div>
+                            <div class="dropdown-menu theme-dropdown-menu" style="width: 100%;">
+                              <div class="menu-list-item active">
+                                Keyword 1
+                              </div>
+                              <div class="menu-list-item">
+                                Keyword 2
+                              </div>
+                              <div class="menu-list-item">
+                                Keyword 1
+                              </div>
+                              <div class="menu-list-item">
+                                Keyword 1
+                              </div>
+                              <div class="menu-list-item">
+                                Keyword 1
+                              </div>
+                            </div>
+                          </div>
+                          <div class="d-flex align-items-center mt-2">
+                            <span class="tag-item me-2">
+                              <span>
+                                Company
+                              </span>
+                              <i class="fa-solid fa-xmark ms-2"></i>
+                            </span>
+                            <span class="tag-item me-2">
+                              <span>
+                                Company
+                              </span>
+                              <i class="fa-solid fa-xmark ms-2"></i>
+                            </span>
+                            <span class="tag-item me-2">
+                              <span>
+                                Company
+                              </span>
+                              <i class="fa-solid fa-xmark ms-2"></i>
+                            </span>
+                            <span class="tag-item me-2">
+                              <span>
+                                Company
+                              </span>
+                              <i class="fa-solid fa-xmark ms-2"></i>
+                            </span>
+                          </div>
+                        </div>
+                        <div class="d-flex justify-content-between align-items-center mt-3">
+                          <div data-bs-toggle="collapse" href="#location-filter-collapse" role="button" 
+                            class="form-section-title" aria-expanded="true" aria-controls="location-filter-collapse">
+                            <i class="fa-solid fa-chevron-down chevron-icon me-2"></i>
+                            <span>Location</span>
+                          </div>
+                          <div>
+                            <button type="button" class="button-link p-0 h-24px font-small">
+                              Clear
+                              <span class="badge bg-warning rounded-circle ms-2 w-24px h-24px d-flex align-items-center justify-content-center">05</span>
+                            </button>
+                          </div>
+                        </div>
+                        <div id="location-filter-collapse" class="collapse show mt-2">
+                          <div class="dropdown">
+                            <div class="form-text-input" data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside">
+                              <span>
+                                <i class="fa-solid fa-magnifying-glass"></i>
+                              </span>
+                              <input class="form-control rounded-pill border-0" type="text" placeholder="Enter countries, state or cities" aria-label=".form-control-lg example">
+                            </div>
+                            <div class="dropdown-menu theme-dropdown-menu" style="width: 100%;">
+                              <div class="menu-list-item active">
+                                Enter countries, state or cities
+                              </div>
+                              <div class="menu-list-item">
+                                Enter countries, state or cities
+                              </div>
+                              <div class="menu-list-item">
+                                Enter countries, state or cities
+                              </div>
+                              <div class="menu-list-item">
+                                Enter countries, state or cities
+                              </div>
+                              <div class="menu-list-item">
+                                Enter countries, state or cities
+                              </div>
+                            </div>
+                          </div>
+                          <div class="d-flex flex-wrap align-items-center mt-2">
+                            <span class="tag-item m-1">
+                              <span>
+                                Location 1
+                              </span>
+                              <i class="fa-solid fa-xmark ms-2"></i>
+                            </span>
+                            <span class="tag-item m-1">
+                              <span>
+                                Location 2
+                              </span>
+                              <i class="fa-solid fa-xmark ms-2"></i>
+                            </span>
+                            <span class="tag-item m-1">
+                              <span>
+                                Location 3
+                              </span>
+                              <i class="fa-solid fa-xmark ms-2"></i>
+                            </span>
+                            <span class="tag-item m-1">
+                              <span>
+                                CompLocation 4any
+                              </span>
+                              <i class="fa-solid fa-xmark ms-2"></i>
+                            </span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="results-area mt-4">
+            <div class="area-filters">
+              <div class="filter-component cursor-pointer">
+                <input class="form-check-input mt-0 theme-checkbox checkbox-small color-black shadow-none" type="checkbox" id="checkboxNoLabel" value="" aria-label="...">
+                <span class="mx-2 w-104px">Select</span>
+                <i class="fa-solid fa-chevron-down chevron-icon"></i>
+              </div>
+              <div class="filter-component cursor-pointer ms-3">
+                <i class="fa-solid fa-list"></i>
+                <span class="ms-3 w-104px">Add to List</span>
+              </div>
+              <button class="button-secondary-outline h-40px ms-3">
+                Apply Additional Filter
+              </button>
+              <div class="flex-fill d-flex justify-content-end">
+                <button class="button-link h-40px px-0">
+                  <i class="fa-solid fa-download me-2"></i>
+                  <span>Export</span>
+                </button>
+              </div>
+            </div>
+            <div class="line-separator"></div>
+            <div class="area-results">
+              <div class="result-item">
+                <div class="card rounded-4 border-0 mt-3">
+                  <div class="card-body rounded-4 border-0 p-4">
+                    <div class="d-flex justify-content-between">
+                      <div class="left-side w-100">
+                        <div class="d-flex">
+                          <div>
+                            <input class="form-check-input mt-0 theme-checkbox checkbox-large color-main shadow-none" type="checkbox" id="checkboxNoLabel" value="" aria-label="...">
+                          </div>
+                          <div class="d-flex ms-4">
+                            <img src="{% static 'theme/img/amazon_logo.png' %}" width="64" height="64">
+                            <div class="d-flex flex-column ms-3 justify-content-between">
+                              <span class="Text__H1H6__H5BoldSemibold600 Text__900BlackHighEmp">Amazon</span>
+                              <div class="Text__900BlackHighEmp">
+                                <i class="fa-solid fa-globe cursor-pointer me-3"></i>
+                                <i class="fa-brands fa-facebook cursor-pointer me-3"></i>
+                                <i class="fa-brands fa-linkedin cursor-pointer me-3"></i>
+                                <i class="fa-brands fa-x-twitter cursor-pointer me-3"></i>
+                                <i class="fa-brands fa-instagram cursor-pointer me-3"></i>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="row mt-3">
+                          <div class="col-6">
+                            <div class="card card-gray border-0 rounded-4 bg-light p-3 information-card">
+                              <span class="card-title">Type</span>
+                              <span class="mt-3 card-value">Ecommerce</span>
+                            </div>
+                          </div>
+                          <div class="col-6">
+                            <div class="card card-gray border-0 rounded-4 bg-light p-3 information-card">
+                              <span class="card-title">People</span>
+                              <span class="mt-3 card-value">100,001+</span>
+                            </div>
+                          </div>
+                          <div class="col-6 mt-3">
+                            <div class="card card-gray border-0 rounded-4 bg-light p-3 information-card">
+                              <span class="card-title d-flex justify-content-between">
+                                <span>
+                                  Country
+                                </span>
+                                <span class="badge bg-main align-content-center">+21</span>
+                              </span>
+                              <span class="mt-3 card-value">United States</span>
+                            </div>
+                          </div>
+                          <div class="col-6 mt-3">
+                            <div class="card card-gray border-0 rounded-4 bg-light p-3 information-card">
+                              <span class="card-title">Market Cap</span>
+                              <span class="mt-3 card-value">2.50B</span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="divider mx-4">
+                        <div class="vr h-100"></div>
+                      </div>
+                      <div class="right-side w-100">
+                        <div class="d-flex justify-content-between align-items-start Text__Body__Body3LightRegular400 Text__900BlackHighEmp">
+                          <div class="d-flex flex-column justify-content-between h-64px">
+                            <div class="">
+                              <i class="fa-regular fa-envelope me-3"></i>
+                              <span>
+                                ********@amazon.com
+                              </span>
+                            </div>
+                            <div>
+                              <i class="fa-solid fa-phone me-3"></i>
+                              <span>
+                                +6584*********
+                              </span>
+                            </div>
+                          </div>
+                          <div>
+                            <i class="fa-solid fa-ellipsis-vertical cursor-pointer"></i>
+                          </div>
+                        </div>
+                        <div class="row mt-3">
+                          <div class="col-6">
+                            <div class="card card-gray border-0 rounded-4 bg-light p-3 information-card">
+                              <span class="card-title">Net Worth</span>
+                              <span class="mt-3 card-value">40.50B</span>
+                            </div>
+                          </div>
+                          <div class="col-6">
+                            <div class="card card-gray border-0 rounded-4 bg-light p-3 information-card">
+                              <span class="card-title">Founded</span>
+                              <span class="mt-3 card-value">2018</span>
+                            </div>
+                          </div>
+                          <div class="col-12 mt-3">
+                            <div class="card card-gray border-0 rounded-4 bg-light p-3 information-card">
+                              <span class="card-title">Industry Tags</span>
+                              <span>Consumer Goods, E- Commerce, Retail, Shopping, Amazon Prime, Amazon Deals</span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="result-item">
+                <div class="card rounded-4 border-0 mt-3">
+                  <div class="card-body rounded-4 border-0 p-4">
+                    <div class="d-flex justify-content-between">
+                      <div class="left-side w-100">
+                        <div class="d-flex">
+                          <div>
+                            <input class="form-check-input mt-0 theme-checkbox checkbox-large color-main shadow-none" type="checkbox" id="checkboxNoLabel" value="" aria-label="...">
+                          </div>
+                          <div class="d-flex ms-4">
+                            <img src="{% static 'theme/img/amazon_logo.png' %}" width="64" height="64">
+                            <div class="d-flex flex-column ms-3 justify-content-between">
+                              <span class="Text__H1H6__H5BoldSemibold600 Text__900BlackHighEmp">Amazon</span>
+                              <div class="Text__900BlackHighEmp">
+                                <i class="fa-solid fa-globe cursor-pointer me-3"></i>
+                                <i class="fa-brands fa-facebook cursor-pointer me-3"></i>
+                                <i class="fa-brands fa-linkedin cursor-pointer me-3"></i>
+                                <i class="fa-brands fa-x-twitter cursor-pointer me-3"></i>
+                                <i class="fa-brands fa-instagram cursor-pointer me-3"></i>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="row mt-3">
+                          <div class="col-6">
+                            <div class="card card-gray border-0 rounded-4 bg-light p-3 information-card">
+                              <span class="card-title">Type</span>
+                              <span class="mt-3 card-value">Ecommerce</span>
+                            </div>
+                          </div>
+                          <div class="col-6">
+                            <div class="card card-gray border-0 rounded-4 bg-light p-3 information-card">
+                              <span class="card-title">People</span>
+                              <span class="mt-3 card-value">100,001+</span>
+                            </div>
+                          </div>
+                          <div class="col-6 mt-3">
+                            <div class="card card-gray border-0 rounded-4 bg-light p-3 information-card">
+                              <span class="card-title d-flex justify-content-between">
+                                <span>
+                                  Country
+                                </span>
+                                <span class="badge bg-main align-content-center">+21</span>
+                              </span>
+                              <span class="mt-3 card-value">United States</span>
+                            </div>
+                          </div>
+                          <div class="col-6 mt-3">
+                            <div class="card card-gray border-0 rounded-4 bg-light p-3 information-card">
+                              <span class="card-title">Market Cap</span>
+                              <span class="mt-3 card-value">2.50B</span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="divider mx-4">
+                        <div class="vr h-100 vertical-line-separator"></div>
+                      </div>
+                      <div class="right-side w-100">
+                        <div class="d-flex justify-content-between align-items-start Text__Body__Body3LightRegular400 Text__900BlackHighEmp">
+                          <div class="d-flex flex-column justify-content-between h-64px">
+                            <div class="">
+                              <i class="fa-regular fa-envelope me-3"></i>
+                              <span>
+                                ********@amazon.com
+                              </span>
+                            </div>
+                            <div>
+                              <i class="fa-solid fa-phone me-3"></i>
+                              <span>
+                                +6584*********
+                              </span>
+                            </div>
+                          </div>
+                          <div>
+                            <i class="fa-solid fa-ellipsis-vertical cursor-pointer"></i>
+                          </div>
+                        </div>
+                        <div class="row mt-3">
+                          <div class="col-6">
+                            <div class="card card-gray border-0 rounded-4 bg-light p-3 information-card">
+                              <span class="card-title">Net Worth</span>
+                              <span class="mt-3 card-value">40.50B</span>
+                            </div>
+                          </div>
+                          <div class="col-6">
+                            <div class="card card-gray border-0 rounded-4 bg-light p-3 information-card">
+                              <span class="card-title">Founded</span>
+                              <span class="mt-3 card-value">2018</span>
+                            </div>
+                          </div>
+                          <div class="col-12 mt-3">
+                            <div class="card card-gray border-0 rounded-4 bg-light p-3 information-card">
+                              <span class="card-title">Industry Tags</span>
+                              <span>Consumer Goods, E- Commerce, Retail, Shopping, Amazon Prime, Amazon Deals</span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="result-item">
+                <div class="card rounded-4 border-0 mt-3">
+                  <div class="card-body rounded-4 border-0 p-4">
+                    <div class="d-flex justify-content-between">
+                      <div class="left-side w-100">
+                        <div class="d-flex">
+                          <div>
+                            <input class="form-check-input mt-0 theme-checkbox checkbox-large color-main shadow-none" type="checkbox" id="checkboxNoLabel" value="" aria-label="...">
+                          </div>
+                          <div class="d-flex ms-4">
+                            <img src="{% static 'theme/img/amazon_logo.png' %}" width="64" height="64">
+                            <div class="d-flex flex-column ms-3 justify-content-between">
+                              <span class="Text__H1H6__H5BoldSemibold600 Text__900BlackHighEmp">Amazon</span>
+                              <div class="Text__900BlackHighEmp">
+                                <i class="fa-solid fa-globe cursor-pointer me-3"></i>
+                                <i class="fa-brands fa-facebook cursor-pointer me-3"></i>
+                                <i class="fa-brands fa-linkedin cursor-pointer me-3"></i>
+                                <i class="fa-brands fa-x-twitter cursor-pointer me-3"></i>
+                                <i class="fa-brands fa-instagram cursor-pointer me-3"></i>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="row mt-3">
+                          <div class="col-6">
+                            <div class="card card-gray border-0 rounded-4 bg-light p-3 information-card">
+                              <span class="card-title">Type</span>
+                              <span class="mt-3 card-value">Ecommerce</span>
+                            </div>
+                          </div>
+                          <div class="col-6">
+                            <div class="card card-gray border-0 rounded-4 bg-light p-3 information-card">
+                              <span class="card-title">People</span>
+                              <span class="mt-3 card-value">100,001+</span>
+                            </div>
+                          </div>
+                          <div class="col-6 mt-3">
+                            <div class="card card-gray border-0 rounded-4 bg-light p-3 information-card">
+                              <span class="card-title d-flex justify-content-between">
+                                <span>
+                                  Country
+                                </span>
+                                <span class="badge bg-main align-content-center">+21</span>
+                              </span>
+                              <span class="mt-3 card-value">United States</span>
+                            </div>
+                          </div>
+                          <div class="col-6 mt-3">
+                            <div class="card card-gray border-0 rounded-4 bg-light p-3 information-card">
+                              <span class="card-title">Market Cap</span>
+                              <span class="mt-3 card-value">2.50B</span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="divider mx-4">
+                        <div class="vr h-100"></div>
+                      </div>
+                      <div class="right-side w-100">
+                        <div class="d-flex justify-content-between align-items-start Text__Body__Body3LightRegular400 Text__900BlackHighEmp">
+                          <div class="d-flex flex-column justify-content-between h-64px">
+                            <div class="">
+                              <i class="fa-regular fa-envelope me-3"></i>
+                              <span>
+                                ********@amazon.com
+                              </span>
+                            </div>
+                            <div>
+                              <i class="fa-solid fa-phone me-3"></i>
+                              <span>
+                                +6584*********
+                              </span>
+                            </div>
+                          </div>
+                          <div>
+                            <i class="fa-solid fa-ellipsis-vertical cursor-pointer"></i>
+                          </div>
+                        </div>
+                        <div class="row mt-3">
+                          <div class="col-6">
+                            <div class="card card-gray border-0 rounded-4 bg-light p-3 information-card">
+                              <span class="card-title">Net Worth</span>
+                              <span class="mt-3 card-value">40.50B</span>
+                            </div>
+                          </div>
+                          <div class="col-6">
+                            <div class="card card-gray border-0 rounded-4 bg-light p-3 information-card">
+                              <span class="card-title">Founded</span>
+                              <span class="mt-3 card-value">2018</span>
+                            </div>
+                          </div>
+                          <div class="col-12 mt-3">
+                            <div class="card card-gray border-0 rounded-4 bg-light p-3 information-card">
+                              <span class="card-title">Industry Tags</span>
+                              <span>Consumer Goods, E- Commerce, Retail, Shopping, Amazon Prime, Amazon Deals</span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div> 
+  </div>
+{% endblock content %}

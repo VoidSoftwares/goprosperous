@@ -1,0 +1,238 @@
+{% extends 'layouts/app/index.html' %}
+
+{% block title %}
+  <title>
+    Skeleton
+  </title>
+{% endblock title %}
+
+{% block stylesheets %}{% endblock stylesheets %}
+
+{% block scripts %}{% endblock scripts %}
+
+{% block content %}
+  <div id="content" class="container-fluid content collapsed">
+    <div class="container mt-3">
+      <div class="row">
+        <div class="col-12 col-lg-1"></div>
+        <div class="col-12 col-lg-10">
+          <div class="d-flex align-items-center justify-content-between">
+            <div class="d-flex">
+              <button type="button" class="button-tab active">
+                <i class="fa-regular fa-building me-2"></i>
+                Company
+              </button>
+              <button type="button" class="button-tab ms-3">
+                <i class="fa-regular fa-user me-2"></i>
+                Person
+              </button>
+            </div>
+            <div class="input-group input-group-lg w-50">
+              <span class="input-group-text bg-white border-0 rounded-end rounded-4">
+                <i class="fa-solid fa-magnifying-glass"></i>
+              </span>
+              <input class="form-control border-0 shadow-none rounded-start rounded-4 ps-0" type="text" 
+                placeholder="Search" aria-label="Search">
+            </div>
+          </div>
+
+          <div class="mt-4">
+            <div class="card table-wrapper">
+              <div class="card-body p-0">
+                <table class="table mb-0">
+                  <thead>
+                    <tr>
+                      <th>Search name</th>
+                      <th>Active filters</th>
+                      <th>Last modified</th>
+                      <th width="5%" class="text-end">Search</th>
+                      <th width="5%" class="text-end">Actions</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Tech company in US</td>
+                      <td>4</td>
+                      <td>2024-03-13 07:03</td>
+                      <td class="text-end">
+                        <i class="bi bi-search"></i>
+                      </td>
+                      <td class="text-end">
+                        <div class="dropdown">
+                          <i class="bi bi-three-dots-vertical cursor-pointer dropdown-toggle"
+                            type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                          </i>
+                          <ul class="dropdown-menu dropdown-menu-end rounded-4 Text__Body__Body3LightRegular400 Text__900BlackHighEmp">
+                            <li>
+                              <a class="btn border-0" href="#">
+                                <i class="bi bi-pencil-square"></i>
+                                <span class="ms-2">Edit</span>
+                              </a>
+                            </li>
+                            <li>
+                              <a class="btn border-0" href="#">
+                                <i class="bi bi-copy"></i>
+                                <span class="ms-2">Copy</span>
+                              </a>
+                            </li>
+                            <li>
+                              <a class="btn border-0 text-danger" href="#">
+                                <i class="bi bi-trash"></i>
+                                <span class="ms-2">Delete</span>
+                              </a>
+                            </li>
+                          </ul>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>Tech company in US</td>
+                      <td>4</td>
+                      <td>2024-03-13 07:03</td>
+                      <td class="text-end">
+                        <i class="bi bi-search"></i>
+                      </td>
+                      <td class="text-end">
+                        <div class="dropdown">
+                          <i class="bi bi-three-dots-vertical cursor-pointer dropdown-toggle"
+                            type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                          </i>
+                          <ul class="dropdown-menu dropdown-menu-end rounded-4 Text__Body__Body3LightRegular400 Text__900BlackHighEmp">
+                            <li>
+                              <a class="btn border-0" href="#">
+                                <i class="bi bi-pencil-square"></i>
+                                <span class="ms-2">Edit</span>
+                              </a>
+                            </li>
+                            <li>
+                              <a class="btn border-0" href="#">
+                                <i class="bi bi-copy"></i>
+                                <span class="ms-2">Copy</span>
+                              </a>
+                            </li>
+                            <li>
+                              <a class="btn border-0 text-danger" href="#">
+                                <i class="bi bi-trash"></i>
+                                <span class="ms-2">Delete</span>
+                              </a>
+                            </li>
+                          </ul>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>Tech company in US</td>
+                      <td>4</td>
+                      <td>2024-03-13 07:03</td>
+                      <td class="text-end">
+                        <i class="bi bi-search"></i>
+                      </td>
+                      <td class="text-end">
+                        <div class="dropdown">
+                          <i class="bi bi-three-dots-vertical cursor-pointer dropdown-toggle"
+                            type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                          </i>
+                          <ul class="dropdown-menu dropdown-menu-end rounded-4 Text__Body__Body3LightRegular400 Text__900BlackHighEmp">
+                            <li>
+                              <a class="btn border-0" href="#">
+                                <i class="bi bi-pencil-square"></i>
+                                <span class="ms-2">Edit</span>
+                              </a>
+                            </li>
+                            <li>
+                              <a class="btn border-0" href="#">
+                                <i class="bi bi-copy"></i>
+                                <span class="ms-2">Copy</span>
+                              </a>
+                            </li>
+                            <li>
+                              <a class="btn border-0 text-danger" href="#">
+                                <i class="bi bi-trash"></i>
+                                <span class="ms-2">Delete</span>
+                              </a>
+                            </li>
+                          </ul>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>Tech company in US</td>
+                      <td>4</td>
+                      <td>2024-03-13 07:03</td>
+                      <td class="text-end">
+                        <i class="bi bi-search"></i>
+                      </td>
+                      <td class="text-end">
+                        <div class="dropdown">
+                          <i class="bi bi-three-dots-vertical cursor-pointer dropdown-toggle"
+                            type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                          </i>
+                          <ul class="dropdown-menu dropdown-menu-end rounded-4 Text__Body__Body3LightRegular400 Text__900BlackHighEmp">
+                            <li>
+                              <a class="btn border-0" href="#">
+                                <i class="bi bi-pencil-square"></i>
+                                <span class="ms-2">Edit</span>
+                              </a>
+                            </li>
+                            <li>
+                              <a class="btn border-0" href="#">
+                                <i class="bi bi-copy"></i>
+                                <span class="ms-2">Copy</span>
+                              </a>
+                            </li>
+                            <li>
+                              <a class="btn border-0 text-danger" href="#">
+                                <i class="bi bi-trash"></i>
+                                <span class="ms-2">Delete</span>
+                              </a>
+                            </li>
+                          </ul>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>Tech company in US</td>
+                      <td>4</td>
+                      <td>2024-03-13 07:03</td>
+                      <td class="text-end">
+                        <i class="bi bi-search"></i>
+                      </td>
+                      <td class="text-end">
+                        <div class="dropdown">
+                          <i class="bi bi-three-dots-vertical cursor-pointer dropdown-toggle"
+                            type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                          </i>
+                          <ul class="dropdown-menu dropdown-menu-end rounded-4 Text__Body__Body3LightRegular400 Text__900BlackHighEmp">
+                            <li>
+                              <a class="btn border-0" href="#">
+                                <i class="bi bi-pencil-square"></i>
+                                <span class="ms-2">Edit</span>
+                              </a>
+                            </li>
+                            <li>
+                              <a class="btn border-0" href="#">
+                                <i class="bi bi-copy"></i>
+                                <span class="ms-2">Copy</span>
+                              </a>
+                            </li>
+                            <li>
+                              <a class="btn border-0 text-danger" href="#">
+                                <i class="bi bi-trash"></i>
+                                <span class="ms-2">Delete</span>
+                              </a>
+                            </li>
+                          </ul>
+                        </div>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-lg-1"></div>
+      </div>
+    </div>
+  </div>
+{% endblock content %}

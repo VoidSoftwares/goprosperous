@@ -1,0 +1,82 @@
+{% load static %}
+
+<nav
+  id="navbar"
+  class="navbar navbar-expand-lg fixed-top collapsed"
+>
+  <div class="container-fluid">
+    <button
+      id="toggle-sidebar"
+      type="button"
+      class="btn btn-sm btn-icon rounded-circle me-2 GrayColor__600"
+    >
+      <i class="fa-solid fa-right-left"></i>
+    </button>
+    <button
+      class="navbar-toggler"
+      type="btn btn-sm btn-icon rounded-pill"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarNav"
+      aria-controls="navbarNav"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <div class="w-100 d-flex justify-content-end align-items-center">
+        <span class="me-4 GrayColor__600">
+          Contact Credits Used - 
+          <span class="MainColor__Main950">0/25</span>
+        </span>
+        <button class="btn me-3 rounded-pill btn-main" type="submit">
+          <span>
+            Add Credits
+          </span>
+          <i class="fa-solid fa-circle-plus ms-1 align-self-end"></i>
+        </button>
+        <a href="/upgrade_plan" class="btn me-3 rounded-pill btn-gradient">
+          Upgrade Plan
+        </a>
+        <div class="dropdown notifications-dropdown ms-2">
+          <a class="icon-link dropdown-toggle" href="#"  data-bs-display="static" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <i class="fa-regular fa-bell GrayColor__600"></i>
+          </a>
+          <ul class="dropdown-menu dropdown-menu-end">
+            <li>
+              <a class="btn" href="#">
+                <span class="ms-2">Notification 1</span>
+              </a>
+            </li>
+            <li class="m-0 p-0"><hr class="dropdown-divider w-100"></li>
+            <li>
+              <a class="btn text-danger" href="#">
+                <span class="ms-2">Notification 2</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="dropdown user-account-dropdown">
+          <button class="dropdown-toggle rounded-circle" data-bs-display="static" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <img src="{% static 'theme/img/profile_pic.png' %}" alt="User Profile">
+          </button>
+          <ul class="dropdown-menu dropdown-menu-end">
+            <li>
+              <a class="btn" href="/profile">
+                <i class="fa-regular fa-user"></i>
+                <span class="ms-2">My Account</span>
+              </a>
+            </li>
+            <li class="m-0 p-0"><hr class="dropdown-divider w-100 "></li>
+            <li>
+              <a class="btn text-danger" href="/login">
+                <i class="fa-solid fa-arrow-right-from-bracket"></i>
+                <span class="ms-2">Logout</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>

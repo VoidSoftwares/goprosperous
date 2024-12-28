@@ -1,0 +1,251 @@
+{% load static %}
+
+<div class="card rounded-4 border-0 position-sticky top-0 secondary-sidebar">
+  <div class="card-body rounded-4 border-0 p-0 h-100 d-flex flex-column">
+    <div class="sidebar-header p-3">
+      <div class="d-flex justify-content-between">
+        <span>Search</span>
+        <div class="d-flex">
+          <button class="button-main-outline h-24px p-2 px-3 rounded-1 fw-light">Save</button>
+          <button class="button-secondary-outline h-24px p-2 px-3 rounded-1 fw-light ms-2">Clear All</button>
+        </div>
+      </div>
+      <div class="d-flex justify-content-around mt-4">
+        <button type="button" class="button-tab active">
+          <i class="fa-regular fa-building me-2"></i>
+          Company
+        </button>
+        <button type="button" class="button-tab">
+          <i class="fa-regular fa-user me-2"></i>
+          Person
+        </button>
+      </div>
+    </div>
+    <div class="line-separator m-0"></div>
+    <div class="sidebar-sections flex-1 border-0 overflow-auto pt-2 mb-2">
+      <div class="sidebar-section">
+        <div class="section-title px-3 my-2 Text__Body__Body2Semibold600 Text__900BlackHighEmp">
+          <span>General</span>
+        </div>
+        <div class="section-content px-4 mt-2">
+          <div class="section-item my-1 secondary-sidebar-collapse-section">
+            <a class="btn item-title d-flex justify-content-between align-items-center secondary-sidebar-collapse-toggler p-0 shadow-none Text__900BlackHighEmp"
+              data-bs-toggle="collapse" href="#company-size-collapse" role="button" 
+              aria-expanded="false" aria-controls="company-size-collapse">
+              <div>
+                <i class="fa-regular fa-building me-2"></i>
+                <span>
+                  Company name
+                </span>
+              </div>
+              <div>
+                <i class="fa-solid fa-chevron-down chevron-icon"></i>
+              </div>
+            </a>
+            <div id="company-size-collapse" class="collapse item-content mt-3 px-2 secondary-sidebar-collapse-content">
+              <input class="form-control rounded-pill shadow-none border-0 light-placeholder" type="text" placeholder="Company name"
+                aria-label="company name">
+            </div>
+          </div>
+          <div class="section-item my-1 secondary-sidebar-collapse-section collapse-open">
+            <a class="btn item-title d-flex justify-content-between align-items-center secondary-sidebar-collapse-toggler p-0 shadow-none Text__900BlackHighEmp"
+              data-bs-toggle="collapse" href="#company-name-collapse" role="button" 
+              aria-expanded="true" aria-controls="company-name-collapse">
+              <div>
+                <i class="fa-solid fa-location-dot me-2"></i>
+                <span>
+                  Company location
+                </span>
+              </div>
+              <div>
+                <i class="fa-solid fa-chevron-up chevron-icon"></i>
+              </div>
+            </a>
+            <div id="company-name-collapse" class="collapse item-content mt-3 px-2 secondary-sidebar-collapse-content show">
+              <div class="d-flex flex-wrap align-items-center">
+                <div class="badge theme-toggle-badge rounded-pill py-1 px-3 active">Include</div>
+                <div class="badge theme-toggle-badge rounded-pill py-1 px-3 ms-2">Exclude</div>
+              </div>
+
+              <div class="dropdown">
+                <input class="form-control rounded-pill shadow-none border-0 light-placeholder mt-3" type="text" placeholder="Company location"
+                  aria-label="company location" data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside">
+                  <div class="dropdown-menu theme-dropdown-menu py-1 px-2 rounded-2" style="width: 100%; max-height: 208px; overflow-y: auto;">
+                    <div class="input-dropdown-list-item active">
+                      <div>
+                        <img src="{% static 'theme/img/amazon_logo.png' %}" width="48" height="48">
+                      </div>
+                      <div class="d-flex flex-column justify-content-between ms-2">
+                        <span>Amazon</span>
+                        <span>amazon.com</span>
+                      </div>
+                    </div>
+                    <div class="input-dropdown-list-item">
+                      <div>
+                        <img src="{% static 'theme/img/amazon_logo.png' %}" width="48" height="48">
+                      </div>
+                      <div class="d-flex flex-column justify-content-between ms-2">
+                        <span>Amazon</span>
+                        <span>amazon.com</span>
+                      </div>
+                    </div>
+                    <div class="input-dropdown-list-item">
+                      <div>
+                        <img src="{% static 'theme/img/amazon_logo.png' %}" width="48" height="48">
+                      </div>
+                      <div class="d-flex flex-column justify-content-between ms-2">
+                        <span>Amazon</span>
+                        <span>amazon.com</span>
+                      </div>
+                    </div>
+                    <div class="input-dropdown-list-item">
+                      <div>
+                        <img src="{% static 'theme/img/amazon_logo.png' %}" width="48" height="48">
+                      </div>
+                      <div class="d-flex flex-column justify-content-between ms-2">
+                        <span>Amazon</span>
+                        <span>amazon.com</span>
+                      </div>
+                    </div>
+                    <div class="input-dropdown-list-item">
+                      <div>
+                        <img src="{% static 'theme/img/amazon_logo.png' %}" width="48" height="48">
+                      </div>
+                      <div class="d-flex flex-column justify-content-between ms-2">
+                        <span>Amazon</span>
+                        <span>amazon.com</span>
+                      </div>
+                    </div>
+                  </div>
+              </div>
+            </div>
+          </div>
+          <div class="section-item my-1 secondary-sidebar-collapse-section">
+            <a class="btn item-title d-flex justify-content-between align-items-center secondary-sidebar-collapse-toggler p-0 shadow-none Text__900BlackHighEmp"
+              data-bs-toggle="collapse" href="#company-location-collapse" role="button" 
+              aria-expanded="false" aria-controls="company-location-collapse">
+              <div>
+                <i class="fa-solid fa-map-location-dot me-2"></i>
+                <span>
+                  Location count
+                </span>
+              </div>
+              <div>
+                <i class="fa-solid fa-chevron-down chevron-icon"></i>
+              </div>
+            </a>
+            <div id="company-location-collapse" class="collapse item-content mt-3 px-2 secondary-sidebar-collapse-content">
+              <input class="form-control rounded-pill shadow-none border-0 light-placeholder" type="text" placeholder="Location count">
+            </div>
+          </div>
+          <div class="section-item my-1 secondary-sidebar-collapse-section">
+            <a class="btn item-title d-flex justify-content-between align-items-center secondary-sidebar-collapse-toggler p-0 shadow-none Text__900BlackHighEmp"
+              data-bs-toggle="collapse" href="#location-count-collapse" role="button" 
+              aria-expanded="false" aria-controls="location-count-collapse">
+              <div>
+                <i class="fa-solid fa-expand me-2"></i>
+                <span>
+                  Company size
+                </span>
+              </div>
+              <div>
+                <i class="fa-solid fa-chevron-down chevron-icon"></i>
+              </div>
+            </a>
+            <div id="location-count-collapse" class="collapse item-content mt-3 px-2 secondary-sidebar-collapse-content">
+              <input class="form-control rounded-pill shadow-none border-0 light-placeholder" type="text" placeholder="Company size"
+                aria-label="company zise">
+            </div>
+          </div>  
+          <div class="section-item my-1 secondary-sidebar-collapse-section">
+            <a class="btn item-title d-flex justify-content-between align-items-center secondary-sidebar-collapse-toggler p-0 shadow-none Text__900BlackHighEmp"
+              data-bs-toggle="collapse" href="#company-industry-collapse" role="button" 
+              aria-expanded="false" aria-controls="company-industry-collapse">
+              <div>
+                <i class="fa-solid fa-industry me-2"></i>
+                <span>
+                  Industry
+                </span>
+              </div>  
+              <div>
+                <i class="fa-solid fa-chevron-down chevron-icon"></i>
+              </div>
+            </a>
+            <div id="company-industry-collapse" class="collapse item-content mt-3 px-2 secondary-sidebar-collapse-content">
+              <input class="form-control rounded-pill shadow-none border-0 light-placeholder" type="text" placeholder="Company industry"
+                aria-label="company name">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="line-separator mx-3"></div>
+      <div class="sidebar-section">
+        <div class="section-title px-3 my-2 Text__Body__Body2Semibold600 Text__900BlackHighEmp">
+          <span>Details</span>
+        </div>
+        <div class="section-content px-4 mt-2">
+          <div class="section-item my-1 secondary-sidebar-collapse-section">
+            <a class="btn item-title d-flex justify-content-between align-items-center secondary-sidebar-collapse-toggler p-0 shadow-none Text__900BlackHighEmp"
+              data-bs-toggle="collapse" href="#department-size-collapse" role="button" 
+              aria-expanded="false" aria-controls="department-size-collapse">
+              <div>
+                <i class="fa-regular fa-building me-2"></i>
+                <span>
+                  Depratment size
+                </span>
+              </div>
+              <div>
+                <i class="fa-solid fa-chevron-down chevron-icon"></i>
+              </div>
+            </a>
+            <div id="department-size-collapse" class="collapse item-content mt-3 px-2 secondary-sidebar-collapse-content">
+              <input class="form-control rounded-pill shadow-none border-0 light-placeholder" type="text" placeholder="department-size"
+                aria-label="department-size">
+            </div>
+          </div>
+          <div class="section-item my-1 secondary-sidebar-collapse-section collapse-open">
+            <a class="btn item-title d-flex justify-content-between align-items-center secondary-sidebar-collapse-toggler p-0 shadow-none Text__900BlackHighEmp"
+              data-bs-toggle="collapse" href="#year-founded-collapse" role="button" 
+              aria-expanded="true" aria-controls="year-founded-collapse">
+              <div>
+                <i class="fa-solid fa-location-dot me-2"></i>
+                <span>
+                  Year founded
+                </span>
+              </div>
+              <div>
+                <i class="fa-solid fa-chevron-up chevron-icon"></i>
+              </div>
+            </a>
+            <div id="year-founded-collapse" class="collapse item-content mt-3 px-2 secondary-sidebar-collapse-content show">
+              <div class="d-flex flex-wrap align-items-center">
+                <div class="badge theme-toggle-badge rounded-pill py-1 px-3 active">Include</div>
+                <div class="badge theme-toggle-badge rounded-pill py-1 px-3 ms-2">Exclude</div>
+              </div>
+              <input class="form-control rounded-pill shadow-none border-0 light-placeholder mt-3" type="text" placeholder="year-founded"
+                aria-label="year-founded">
+            </div>
+          </div>
+          <div class="section-item my-1 secondary-sidebar-collapse-section">
+            <a class="btn item-title d-flex justify-content-between align-items-center secondary-sidebar-collapse-toggler p-0 shadow-none Text__900BlackHighEmp"
+              data-bs-toggle="collapse" href="#operational-language-collapse" role="button" 
+              aria-expanded="false" aria-controls="operational-language-collapse">
+              <div>
+                <i class="fa-solid fa-map-location-dot me-2"></i>
+                <span>
+                  Operational language
+                </span>
+              </div>
+              <div>
+                <i class="fa-solid fa-chevron-down chevron-icon"></i>
+              </div>
+            </a>
+            <div id="operational-language-collapse" class="collapse item-content mt-3 px-2 secondary-sidebar-collapse-content">
+              <input class="form-control rounded-pill shadow-none border-0 light-placeholder" type="text" placeholder="operational-language">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

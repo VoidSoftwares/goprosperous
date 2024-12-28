@@ -1,0 +1,73 @@
+{% load static %}
+
+<div class="sidebar collapsed MainColor__Main950_BG pt-0" id="sidebar">
+  <ul class="nav d-flex flex-column">
+    <li class="logo-item mt-2">
+      <a class="nav-link logo" href="/">
+        <img src="{% static 'theme/img/logo.png'%}" width="36" height="48">
+      </a>
+      <a class="nav-link logo-horizontal" href="/">
+        <img src="{% static 'theme/img/Logo_Horizontal.png'%}" width="171" height="34">
+      </a>
+    </li>
+    <li class="nav-item mt-4">
+      <a class="nav-link active" href="/">
+        <i class="fa-solid fa-gauge"></i>
+        <span>Home</span>
+      </a>
+    </li>
+    <li class="nav-item line-separator">
+      <hr>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="/lookalike_finder">
+        <i class="fa-solid fa-microchip"></i>
+        <span>Lookalike Finder</span>
+      </a>
+    </li>
+    <li class="nav-item line-separator">
+      <hr>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="/search">
+        <i class="fas fa-search"></i>
+        <span>Search</span>
+      </a>
+    </li>
+    <li class="nav-item line-separator">
+      <hr>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="/list">
+        <i class="fas fa-list"></i>
+        <span>List</span>
+      </a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="/export_log">
+        <i class="fa-solid fa-clock-rotate-left"></i>
+        <span>Export Log</span>
+      </a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="/saved_search">
+        <i class="fa-solid fa-magnifying-glass-dollar"></i>
+        <span>Saved Search</span>
+      </a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="/email_personalization">
+        <i class="fa-regular fa-envelope"></i>
+        <span>Email Personalization</span>
+      </a>
+    </li>
+  </ul>
+  <ul class="nav d-flex flex-column">
+    <li class="nav-item">
+      <a class="nav-link" href="/settings">
+        <i class="fas fa-gear"></i>
+        <span>Settings</span>
+      </a>
+    </li>
+  </ul>
+</div>
